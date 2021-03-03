@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+</head>
+<body>
+    <!-- TITLE -->
+    <header>
+        <h1 class="header">Grid Trading Helper</h1>
+    </header>
+    <!-- POPUP FORM -->
+    <div class="form-popup" id="myForm">
+        <form class="form-container">
+          <h1>Login</h1>
+      
+          <label for="API-KEY"><b>API-KEY</b></label>
+          <input id="API-KEY" type="text" placeholder="Enter API-KEY" name="API-KEY" required>
+      
+          <label for="SECRET KEY"><b>SECRET KEY</b></label>
+          <input id="SECRET KEY" type="password" placeholder="Enter SECRET KEY" name="SECRET KEY" required>
+      
+          <button type="button" class="login_button" >Login</button>
+        </form>
+      </div>
+    <!-- CUMULATIVE AVERAGES -->
+    <div class="row">
+        <div class="row">
+            <div class="column">
+                <div class="buy_display">Buy Quantity</div>
+                <div class="buy_quantity">0</div>
+            </div>
+            <div class="column">
+                <div class="buy_display">Average Price</div>
+                <div class="buy_price">0</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="buy_display">Sell Quantity</div>
+                <div class="sell_quantity">0</div>
+            </div>
+            <div class="column">
+                <div class="buy_display">Average Price</div>
+                <div class="sell_price">0</div>
+            </div>
+        </div>
+    </div>
+    <!-- INPUT FIELD TO ENTER TASK AND DROPDOWN FILTER -->
+    <trade_tracker>
+        <input type="text" placeholder="Enter symbol" class="todo_input" />
+        <button class="todo_button" type="button">
+            <i class="fas fa-plus-square"></i>
+        </button>
+    </trade_tracker>
+    <!-- CONTAINER FOR DISPLAYING TO-DO LIST BY ADDING TASKS DYNAMICALLY USING JAVASCRIPT -->
+    <div class="todo_container">
+        <ul class="todo_list"></ul>
+    </div>
+    <!-- ADDING JAVA SCRIPT -->
+    
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
