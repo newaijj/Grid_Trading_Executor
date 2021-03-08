@@ -200,9 +200,9 @@ time=setInterval(function(){
                 headers: {"X-MBX-APIKEY":APIKEY}
             })
             .then(response => {
-                //return response.json();
+                return response.json();
                 //FOR DEBUGGING
-                return sampleTradeList;
+                //return sampleTradeList;
             })
             .then(info => {
                 info.forEach( function(trade,index){
