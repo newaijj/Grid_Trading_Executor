@@ -162,8 +162,7 @@ function trade_list_url(){
 
 //timestamp of last trade logged by helper
 
-//var timestamp_last_trade = 1615853790000-10*24*60*60*1000;
-
+var timestamp_last_trade = 1615853790000-10*24*60*60*1000;
 fetch(time_url())
     .then(timeResponse => {
         return timeResponse.json();
@@ -201,10 +200,6 @@ class Trade{
 
 time=setInterval(function(){
 
-
-    console.log(spotPerpCheckbox.checked);
-    console.log(timestamp_last_trade);
-
     fetch(time_url())
         .then( timeResponse => {
             return timeResponse.json();
@@ -231,7 +226,7 @@ time=setInterval(function(){
                 //return sampleTradeList;
             })
             .then(info => {
-                //console.log(timestamp_last_trade);
+                console.log(timestamp_last_trade);
                 //console.log(info)
                 info.forEach( function(trade,index){
                     var new_trade = new Trade(trade,spotPerpCheckbox.checked);
@@ -239,7 +234,6 @@ time=setInterval(function(){
                             
                             addTrade(new_trade);
                             timestamp_last_trade = new_trade.get_time()+1;
-                            console.log("here")
                             
                     }
                     console.log("timestamp_last_trade changed")
