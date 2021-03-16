@@ -231,8 +231,8 @@ time=setInterval(function(){
                 //return sampleTradeList;
             })
             .then(info => {
-                console.log(timestamp_last_trade);
-                console.log(info)
+                //console.log(timestamp_last_trade);
+                //console.log(info)
                 info.forEach( function(trade,index){
                     var new_trade = new Trade(trade,spotPerpCheckbox.checked);
                     if(new_trade.get_time()>timestamp_last_trade){
