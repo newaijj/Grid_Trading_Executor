@@ -161,15 +161,15 @@ function trade_list_url(){
 }
 
 //timestamp of last trade logged by helper
-/*
-var timestamp_last_trade = 1615853790000-10*24*60*60*1000;
-*/
+
+//var timestamp_last_trade = 1615853790000-10*24*60*60*1000;
+
 fetch(time_url())
     .then(timeResponse => {
         return timeResponse.json();
     })
     .then(timeInfo => {
-        timestamp_last_trade = timeInfo['serverTime'];
+        timestamp_last_trade = timeInfo['serverTime']-1000*60*60;
     });
 
 class Trade{
